@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #377294, #a0b4d3);
+    color: #a5df47;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.calculator h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(209, 218, 196, 0.397);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.date-picker-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.date-picker-container input {
+    flex: 1;
+    min-width: 220px;
+    padding: 14px 20px;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.date-picker-container .calendar-icon {
+    position: absolute;
+    right: 10px;
+    color: #333;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.date-picker-container input::-webkit-calendar-picker-indicator {
+    opacity: 0; /* Hide the default calendar icon */
+}
+
+.input-box button {
+    background: rgba(151, 212, 52, 0.986);
+    border: 0;
+    outline: 0;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    width: 100%;
+    max-width: 150px;
+}
+
+.input-box button:hover {
+    background: rgba(162, 207, 90, 0.986);
+}
+
+#result {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+#result span {
+    color: #a5df47;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    .calculator h1 {
+        font-size: 36px;
+    }
+
+    .input-box {
+        padding: 15px;
+    }
+
+    .input-box input {
+        font-size: 14px;
+    }
+
+    .input-box button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    #result {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calculator h1 {
+        font-size: 28px;
+    }
+
+    .input-box {
+        flex-direction: column;
+    }
+
+    .input-box input {
+        width: 100%; /* Ensure input field takes up full width */
+        margin-bottom: 5px; /* Add some space below input */
+    }
+
+    .input-box button {
+        max-width: 100%; /* Ensure button takes up full width */
+        margin-top: 5px; /* Add some space above button */
+    }
+
+    #result {
+        font-size: 14px;
+    }
+}
